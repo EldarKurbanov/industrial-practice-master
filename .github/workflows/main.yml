@@ -6,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-#     - run: pip install Pygments
     - name: Build document
       uses: xu-cheng/latex-action@v2
       with:
