@@ -1,27 +1,15 @@
-name: Build and deploy latex sources to GitHub Pages
-
+name: Build latex
 on: push
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-
     - uses: actions/checkout@v2
-
     - name: Build document
-
       uses: xu-cheng/latex-action@v2
-
       with:
-
         root_file: pre.tex
-
         working_directory: latex_sources/
-
         args: -jobname=my_doc -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-
         compiler: latexmk
